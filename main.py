@@ -19,7 +19,7 @@ def main():
     load_data(df,"netflix_top10_movies", conn)   
 
     print("ETL process completed successfully.")
-#"postgresql://Lana:lana@localhost:5432/dbPipeine_2"
+
 
 if __name__ == "__main__":
     main()
