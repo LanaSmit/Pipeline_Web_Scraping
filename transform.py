@@ -19,7 +19,7 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
     # Normalize column names to lowercase and replace spaces with underscores
     df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
 
-    print("✅ Cleaned columns:", df.columns.tolist())
+    print("Cleaned columns:", df.columns.tolist())
 
     # Remove numbers from the "title" column
     df["title"] = df["title"].str.replace(r"\d+", "", regex=True)
