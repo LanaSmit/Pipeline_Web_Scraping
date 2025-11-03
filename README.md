@@ -1,2 +1,11 @@
-# Pipeline_API
-A Python-based pipeline that extracts real-time weather data from the OpenWeather API, transforms it, and loads it into a PostgreSQL database using SQL for analysis.
+# Netflix Data ETL Pipeline: Python Web Scraping
+
+An ETL pipeline that scrapes Netflix movie and TV data using Python, cleans and transforms it, and loads the results into a PostgreSQL database.
+
+# Pipeline Workflow
+
+Extract: Scrapes Netflix titles, genres, ratings, and release years using Python.
+
+Transform: Cleans and structures the raw data for database loading.
+
+Load: Inserts the processed data into PostgreSQL for querying or analysis.
