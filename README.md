@@ -72,6 +72,7 @@ postgresql://postgres:lana@localhost:5432/postgres
 Execute the full ETL pipeline
 
 python main.py
+
 This will:
 1.	Extract data from Netflix Top 10 and create netflix_top10.csv
 2.	Transform the CSV using Pandas
