@@ -108,7 +108,3 @@ load.py
 main.py
 -	Runs Extract, transform  and load
 -	Executes the complete pipeline end-to-end
-<<<<<<< HEAD
-=======
-
->>>>>>> 16607e4 (Updated project files)
