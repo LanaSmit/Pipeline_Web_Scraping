@@ -1,8 +1,8 @@
-## Netflix Data ETL Pipeline: Python Web Scraping
+# Netflix Data ETL Pipeline: Python Web Scraping
 
 An ETL pipeline that scrapes Netflix movie and TV data using Python, cleans and transforms it, and loads the results into a PostgreSQL database.
 
-# 1. Install Dependencies
+## 1. Install Dependencies
 
 (Optional) Create virtual environment
 ```bash
@@ -21,7 +21,7 @@ selenium
 webdriver-manager
 requests
 
-# 2. Install Google Chrome and ChromeDriver in WSL Ubuntu
+## 2. Install Google Chrome and ChromeDriver in WSL Ubuntu
 
 Install Chrome
 
@@ -29,14 +29,14 @@ Install Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 ```
-#2.2 Verify Chrome install
+Verify Chrome install
 
 ```bash
 google-chrome –version
 ```
 Selenium automatically installs ChromeDriver through webdriver-manager.
 
-# 3. Set Up PostgreSQL in WSL
+## 3. Set Up PostgreSQL in WSL
 
 Install PostgreSQL
 
@@ -67,7 +67,7 @@ Connection string used in main.py:
 postgresql://postgres:lana@localhost:5432/postgres
 ```
 
-# 4. Run the ETL Pipeline
+## 4. Run the ETL Pipeline
 
 Execute the full ETL pipeline
 
@@ -77,7 +77,7 @@ This will:
 2.	Transform the CSV using Pandas
 3.	Load the cleaned data into PostgreSQL table netflix_top10_movies
 
-# 5. Verify Data in PostgreSQL
+## 5. Verify Data in PostgreSQL
 
 Open SQL terminal:
 ```bash
@@ -88,19 +88,22 @@ Run query:
 SELECT * FROM netflix_top10_movies LIMIT 10;
 ```
 
-#  6. Code Files Overview
+##  6. Code Files Overview
 
 extract.py
 -	Uses Selenium + BeautifulSoup
 -	Scrapes Netflix Top-10 page
 -	Saves output to netflix_top10.csv
+  
 transform.py
 -	Normalizes column names
 -	Removes numbers from titles
 -	Replaces spaces with underscores
+  
 load.py
 -	Creates table if not exists
 -	Inserts transformed data into PostgreSQL
+  
 main.py
 -	Runs Extract, transform  and load
 -	Executes the complete pipeline end-to-end
